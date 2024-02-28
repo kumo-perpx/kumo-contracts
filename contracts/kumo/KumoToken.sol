@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
-import {ERC20Capped} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
-import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import {ERC20Capped} from "../libraries/tokens/extensions/ERC20Capped.sol";
+import {ERC20} from "../libraries/tokens/ERC20.sol";
+import {IERC20} from "../libraries/tokens/IERC20.sol";
+import "../libraries/access/Ownable.sol";
 
 contract KumoToken is Ownable, ERC20Capped {
   uint public constant TOKEN_CAPPED = 100 * (10 ** 6) * (10 ** 18);
